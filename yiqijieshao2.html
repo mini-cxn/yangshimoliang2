@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>用光杠杆法测量金属丝的杨氏模量</title>
+    <style>  
+      body {
+        margin: 0;
+        padding: 0;
+       box-sizing: border-box;
+      font-family: system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #f9fcff;
+      }
+     .navbar{
+          background-color:#5388bc;
+          text-align:center;
+          position:sticky;
+          top:0;
+          z-index:1000;
+          box-shadow: 0 6px 12px rgba(0, 20, 40, 0.1);
+          transition: all 0.15s;
+      }
+      .navbar a{
+         color:white;
+         padding:10px 50px;
+         text-decoration:none;
+         display:inline-block;
+         transition:background-color 0.2s,transform 0.1s;
+      }
+    .navbar a:hover{
+         background-color:#000066;
+         box-shadow: 0 1px 0 #ffffff inset,0 -1px 0 #ffffff inset;
+    }
+   .content-wrap {
+       max-width:1000px;
+       margin:30px auto;
+       padding:0 20px;
+  }
+ .three-panels {
+            display: grid;
+            grid-template-columns: 1fr 2.0fr 1fr;  /* 中间更宽放图，左右均等 */
+            gap: 10px;
+            align-items: start;
+            margin: 30px 0;
+        }
+.side-text {                  /* 左右两栏的容器 */
+    background: transparent;   /* 透明背景 */
+    padding: 0 5px;           /* 左右内边距5px */
+}
+.instrument-group {           /* 每个仪器介绍的组（比如"光杠杆"是一个组） */
+    margin-bottom: 28px;      /* 每组之间的间距 */
+}
+.instrument-group h4 {        /* 组标题（如"光杠杆"） */
+    font-size: 1.3rem;
+    color: #024e7e;
+    border-bottom: 2px solid #bdd8f0;  /* 标题下方的蓝色细线 */
+    padding-bottom: 4px;  /* 添加这行，控制标题与下划线的距离 */
+    margin-bottom: 10px;   /* 添加这行，控制标题与下方内容的距离 */
+}
+.instrument-group p {         /* 组内的段落文字 */
+    margin: 8px 0 4px 0;
+    color: #2b4b6e;
+}
+.center-image {               /* 中间栏的容器 */
+    text-align: center;       /* 内容居中 */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.center-image h3 {            /* "实验装置总览"标题 */
+    font-size: 1.6rem;
+    color: #024e7e;
+    margin: 0 0 15px 0;
+    letter-spacing: 1px;      /* 字间距 */
+}
+    
+    @media (max-width: 750px) {
+      .video-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+      }
+      .video-area {
+        align-self: center;
+        width: 100%;
+      }
+      video {
+        width: 100%;
+        height: auto;
+      }
+      .text-box {
+        width: 100%;
+      }
+      .navbar a {
+        padding: 12px 18px;
+        font-size: 16px;
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <div style="
+        background:linear-gradient(180deg,#76aee5,white);
+        text-align:center;
+        padding:30px;
+        font-size:22px;
+    ">
+    <b>用光杠杆法测量金属丝的杨氏模量</b>
+    </div>
+   <div class="navbar">
+      <a href="shiyanyuanli2.html"><b>实验原理</b></a>
+      <a href="yiqijieshao2.html"><b>仪器介绍</b></a>
+      <a href="shiyanbuzhou2.html"><b>实验步骤</b></a>
+      <a href="shujufenxi2.html"><b>数据分析</b></a>
+    </div>
+<div class="content-wrap">
+<div class="three-panels">
+<div class="side-text">
+<div class="instrument-group">
+<br><br><br><br><br><br><br><br><br><br><br><br>
+     <h4>光杠杆&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span style="font-size: 0.9rem; font-weight: normal">▶️</span><a href="https://www.bilibili.com/video/BV14PPkzsES4/?share_source=copy_web&vd_source=2ccbec558d1b9f0cfa42c166fb5f2fd5" target="_blank" style="font-size: 0.9rem; font-weight: normal;color: #2a7a6b;" onmouseover="this.style.color='#1e5a4f'"; onmouseout="this.style.color='#2a7a6b'"><b>视频</b></a>
+     </h4>
+                    <p><span style="line-height: 2.0; display: inline-block;">光杠杆是测量微小长度变化的核心装置，由杠杆架和反射镜组成。<br><b>光杠杆常数</b>=水平卡座的长度（即反射镜转轴与动足尖的初始水平距离）+小型测微器的读数</span></p>
+     </div>
+<div class="instrument-group">
+<br><br>
+     <h4>数字拉力计&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     </h4>
+                    <p><span style="line-height: 2.0; display: inline-block;">实时显示给金属丝施加的<b>拉力视值</b>，精度0.01kg，用于精确控制金属丝的拉力。<br>使用时应注意避免所加的拉力超过实验规定的最大加力值。</span></p>
+     </div>
+    </div>
+ <div class="center-image"> 
+ <h3>实验装置</h3>
+<img src="https://i.imgs.ovh/2026/03/07/Ojqx9F.jpeg" alt="光杠杆法实验装置图" style="max-width: 100%">
+ </div>
+<div class="side-text">
+<div class="instrument-group">
+<br><br><br><br><br><br><br><br>
+     <h4>实验架&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span style="font-size: 0.9rem; font-weight: normal">▶️</span><a href="https://www.bilibili.com/video/BV13nPezrERJ?vd_source=2ccbec558d1b9f0cfa42c166fb5f2fd5" target="_blank" style="font-size: 0.9rem; font-weight: normal; color: #2a7a6b; "onmouseover="this.style.color='#1e5a4f'"; onmouseout="this.style.color='#2a7a6b'"><b>视频</b></a>
+     </h4>
+                    <p><span style="line-height: 2.0; display: inline-block;">主体为金属支架，上端夹紧<b>金属丝</b>，下端连接<b>施力螺母</b>和<b>数字拉力计</b>。旋转施力螺母可以给金属丝施力，加力简单、直观、稳定。</span></p>
+     </div>
+<div class="instrument-group">
+<br><br><br><br><br><br>
+     <h4>望远镜系统&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <span style="font-size: 0.9rem; font-weight: normal">▶️</span><a href="https://www.bilibili.com/video/BV1pzPezbEFW?vd_source=2ccbec558d1b9f0cfa42c166fb5f2fd5" target="_blank" style="font-size: 0.9rem; font-weight: normal; color: #2a7a6b; "onmouseover="this.style.color='#1e5a4f'"; onmouseout="this.style.color='#2a7a6b'"><b>视频</b></a>
+     </h4>
+                    <p><span style="line-height: 2.0; display: inline-block;">望远镜系统包括<b>望远镜支架</b>和<b>望远镜</b>。望远镜支架通过调节螺钉可以微调望远镜。望远镜放大倍数12倍，最近视距0.3m,<br>含有目镜十字分划线（纵线和横线）。</span></p>
+     </div>
+    </div>  
+  </div>
+<div style="
+    margin-top: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 25px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 20, 40, 0.08);
+">    
+<h3 style="
+        color: #024e7e;
+        font-size: 1.4rem;
+        margin: 0 0 10px 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    ">
+    <span>💡</span> 拓展思考
+    </h3>
+    
+    <p style="
+        font-size: 1.0rem;
+        line-height: 1.8;
+        color: #1a3a5c;
+        margin-bottom: 15px;
+        font-weight: 500;
+    ">
+        除了课本上的这种实验装置，还有另一种杨氏模量测量仪，其望远镜与标尺固定在同一支架上，且两者相互平行，通过在砝码盘上增加砝码来给金属丝施力使其伸长，如下图所示。请思考：<br>（1）此装置的原理是什么？它的光杠杆放大倍数是多少？<br>（2）与课本中的装置相比，这种布局有什么优缺点？
+    </p>
+    
+    <img src="https://i.imgs.ovh/2026/03/07/Oj5Kjb.jpeg" 
+         alt="实验装置图" 
+         style="
+            max-width: 500px;
+            border-radius: 12px;
+            border: 2px solid #bdd8f0;
+            margin: 10px auto;
+            display: block;
+         "
+         onerror="this.src='https://i.imgs.ovh/2026/02/23/ywE0nU.jpeg'">
+    
+    <div style="
+        margin-top: 15px;
+        padding: 12px;
+        background: #fff9e6;
+        border-radius: 8px;
+        color: #5e4b2c;
+    ">
+        <span style="font-weight: bold;">💡 提示：</span> 
+        试着画出光路图分析。
+    </div>
+</div>
+
+</div>
+<div style="
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 40px;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #3a5668;
+      border-top: 1px solid #d4e2f0;
+    ">
+ <p style="display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap;">
+        <i class="fas fa-flask fa-lg" style="color: #5388bc;"></i>
+        <span>© 光杠杆法测量杨氏模量 · 数字化教材</span>
+  </div>
+  </body>
+</html>
